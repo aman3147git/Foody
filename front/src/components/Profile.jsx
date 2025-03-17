@@ -56,7 +56,7 @@ const Profile = () => {
                 </div>
                 </div>
                 
-                <input type="text" value={formdata.fullname} onChange={changeHandler} id="fullname" className='font-semibold text-2xl bg-gray-400 p-2 outline-none  focus-visible:ring-transparent' />
+                <input type="text" value={formdata.fullname} onChange={changeHandler} id="fullname" className='font-semibold text-2xl bg-gray-300 p-2 outline-none  focus-visible:ring-transparent' />
 
             </div>
         </div>
@@ -65,28 +65,28 @@ const Profile = () => {
                 <CiMail className='text-gray-500 text-3xl'/>
                 <div className="w-full">
                     <label>Email</label>
-                    <input type="email" value={formdata.email} onChange={changeHandler} id='email' className='p-3 w-full text-gray-600 bg-transparent border-none outline-none bg-gray-400'/>
+                    <input type="email" value={formdata.email} onChange={changeHandler} id='email' className='p-3 w-full text-gray-600  border-none outline-none bg-gray-200'/>
                 </div>
             </div>
             <div className="flex items-center gap-4 rounded-sm p-2">
                 <MdOutlineLocationSearching  className='text-gray-500 text-3xl'/>
                 <div className="w-full">
                     <label>Address</label>
-                    <input type="text" value={formdata.address} onChange={changeHandler} id='address' className='p-3 w-full text-gray-600 bg-transparent border-none outline-none bg-gray-400'/>
+                    <input type="text" value={formdata.address} onChange={changeHandler} id='address' className='p-3 w-full text-gray-600  border-none outline-none bg-gray-200'/>
                 </div>
             </div>
             <div className="flex items-center gap-4 rounded-sm p-2">
                 <CiLocationOn className='text-gray-500 text-3xl'/>
                 <div className="w-full">
                     <label>City</label>
-                    <input type="text" value={formdata.city} onChange={changeHandler} id='city' className='p-3 w-full text-gray-600 bg-transparent border-none outline-none bg-gray-400'/>
+                    <input type="text" value={formdata.city} onChange={changeHandler} id='city' className='p-3 w-full text-gray-600 border-none outline-none bg-gray-200'/>
                 </div>
             </div>
             <div className="flex items-center gap-4 rounded-sm p-2">
                 <TbWorld className='text-gray-500 text-3xl'/>
                 <div className="w-full">
                     <label>Country</label>
-                    <input type="text" value={formdata.country} onChange={changeHandler} id='country' className='p-3 w-full text-gray-600 bg-transparent outline-none border-none bg-gray-400'/>
+                    <input type="text" value={formdata.country} onChange={changeHandler} id='country' className='p-3 w-full text-gray-600 outline-none border-none bg-gray-200'/>
                 </div>
             </div>
         </div>

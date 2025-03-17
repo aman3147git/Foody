@@ -13,6 +13,8 @@ import RestaurantDetail from './components/RestaurantDetail'
 import Cart from './components/Cart'
 import Restaurant from './admin/Restaurant'
 import MenuAdd from './admin/MenuAdd'
+import Orders from './admin/Orders'
+import Myorder from './components/Myorder'
 const App = () => {
   return (
     <BrowserRouter>
@@ -30,6 +32,8 @@ const App = () => {
       <Route path="/verify-email" element={<VerifyEmail/>} />
       <Route path="/admin/restaurant" element={<Restaurant/>} />
       <Route path="/admin/addmenu" element={<MenuAdd/>} />
+      <Route path="/admin/orders" element={<Orders/>} />
+      <Route path="/order/status" element={<Myorder/>} />
     </Routes>
     </BrowserRouter>                  
   )

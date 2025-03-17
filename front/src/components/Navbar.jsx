@@ -24,18 +24,39 @@ const Navbar = () => {
             <Link to="/profile">Profile</Link>
             <Link to="/order/status">Order</Link>
           
-          {admin && (
-            <h1 onClick={() => setShow(!show)} className="relative">
-              Dashboard
-              {show && (
-                <div className="flex flex-col gap-2  py-3 w-[150px] bg-white absolute top-10 right-3 shadow-xl">
-                    <Link to="/admin/restaurant" className="">Restaurant</Link>
-                  <Link to="/admin/menu" className="">Menu</Link>
-                  <Link to="/admin/orders">Orders</Link>
-                </div>
-              )}
-            </h1>
-          )}
+            {admin && (
+  <div className="relative">
+    <h1
+      onClick={() => setShow(!show)}
+      className="cursor-pointer text-lg font-semibold px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 transition"
+    >
+      Dashboard
+    </h1>
+    {show && (
+      <div className="absolute top-12 right-0 w-44 bg-white shadow-lg rounded-lg overflow-hidden">
+        <Link
+          to="/admin/restaurant"
+          className="block px-4 py-2 hover:bg-gray-100 transition"
+        >
+          Restaurant
+        </Link>
+        <Link
+          to="/admin/addmenu"
+          className="block px-4 py-2 hover:bg-gray-100 transition"
+        >
+          Menu
+        </Link>
+        <Link
+          to="/admin/orders"
+          className="block px-4 py-2 hover:bg-gray-100 transition"
+        >
+          Orders
+        </Link>
+      </div>
+    )}
+    </div>
+    )}
+
         </div>
         <div className="flex items-center gap-4">
             <div className="">Dark</div>
@@ -62,7 +83,7 @@ const Navbar = () => {
             <Link className="flex items-center gap-4 px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 font-medium" to="/cart"><FaOpencart/><span>Cart(0)</span></Link>
             <Link className="flex items-center gap-4 px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 font-medium" to="/menu"><LuMenuSquare/><span>Menu</span></Link>
             <Link className="flex items-center gap-4 px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 font-medium" to="/admin/restaurant"><IoRestaurant/><span>Restaurant</span></Link>
-            <Link className="flex items-center gap-4 px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 font-medium" to="/profile"><LuPackageCheck/><span>Restaurant Orders</span></Link>
+            <Link className="flex items-center gap-4 px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 font-medium" to="/admin/orders"><LuPackageCheck/><span>Restaurant Orders</span></Link>
             </div>
             <button className="p-2 w-full bg-slate-700 text-white ">Logout</button>
           </div>
