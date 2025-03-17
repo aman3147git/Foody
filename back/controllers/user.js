@@ -4,9 +4,9 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
 export const Register=async(req,res)=>{
-    const {fullname,email,password}=req.body;
+    const {fullname,email,password,contact}=req.body;
     try{
-    if(!fullname|| !email|| !password){
+    if(!fullname|| !email|| !password || !contact){
         return res.status(401).json({
             message:"invalid data",
             success:false
@@ -15,14 +15,15 @@ export const Register=async(req,res)=>{
     const user=await User.findOne({email});
     if(user){
         return res.status(401).json({
-            message:"Email is already taken",
+            message:"Email has been already taken.",
             success:false
         })
     }
     const hashedpass=bcryptjs.hashSync(password,10);
     await User.create({
         fullname,email,
-        password:hashedpass
+        password:hashedpass,
+        contact
     });
     return res.status(200).json({
         message:"Account created",
