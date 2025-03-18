@@ -33,10 +33,22 @@ const userSchema=new mongoose.Schema({
         type:String,
         default:""
     },
-    isAdmin:{
+    admin:{
         type:Boolean,
         default:false
-    }
+    },
+    lastLogin:{
+        type:Date,
+        default:Date.now
+    },
+    isVerified:{
+        type:Boolean,
+        default:false
+    },
+    resetPasswordToken:String,
+    resetPasswordTokenExpiresAt:Date,
+    verificationToken:String,
+    verificationTokenExpiresAt:Date,
     
 },{timestamps:true});
 export const User=mongoose.model("User",userSchema);
